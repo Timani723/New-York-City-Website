@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New York City Website Design</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="sub-header">
+    <nav>
+      <h2><a>NYC</a></h2>
+      <div class="nav-links" id="navLinks">
+        <img src="img/xmark.svg" class="icons" onclick="hidemenu()">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="explore.html">EXPLORE</a></li>
+          <li><a href="Events_new.html">EVENTS</a></li>
+          <li><a href="plan your visit.html">PLAN YOUR VISIT</a></li>
+        </ul>
+      </div>
+      <img src="img/menu.svg" class="icons" onclick="showmenu()">
+    </nav>
+    <h1>About Us</h1>
+  </section>
+
+  <!-- about us content -->
+    <section class="about-us">
+      <div class="row">
+        <div class="about-col">
+          <h1>New York City</h1>
+          <p>New York City is one of the most iconic cities in the world. It's a place where dreams come true, where the hustle never stops, and where the spirit of innovation and creativity thrives. From the bustling streets of Manhattan to the serene parks of Brooklyn. The city is a melting pot of cultures, cuisines, and experiences, making it a unique and vibrant destination for travelers from around the world. It is a city that never sleeps, and a place where anything is possible. New York City is a city of dreams, where the past, present, and future come together to create a unique and unforgettable experiences. It is a city that is always changing, and a place where the future is always being written.</p>
+          <a href="" class="hero-btn">EXPLORE NOW</a>
+        </div>
+        <div class="about-col">
+          <img src="img/Empire state building .jpg">
+        </div>
+      </div>
+    </section>
+
+
+
+  <!-- footer -->
+  <section class="footer">
+    <h4>About Us</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <div class="footer-icons">
+      <img src="img/facebook.svg">
+      <img src="img/instagram.svg">
+      <img src="img/linkedin.svg">
+      <img src="img/twitter.svg">
+    </div>
+    <p>Made with love by <a href="">@Timani</a></p>
+  </section>
+
+
+
+  
+  <!-- javascript for togglemenu -->
+  <script>
+    var navLinks=document.getElementById("navLinks");
+    function showmenu() {
+      navLinks.style.right="0";
+    }
+    function hidemenu() {
+      navLinks.style.right="-200px";
+    }
+  </script>
+</body>
+</html>

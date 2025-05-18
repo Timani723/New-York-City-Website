@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New York City Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="sub-header">
+    <nav>
+      <h2><a>NYC</a></h2>
+      <div class="nav-links" id="navLinks">
+        <img src="img/xmark.svg" class="icons" onclick="hidemenu()">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="explore.html">EXPLORE</a></li>
+          <li><a href="Events_new.html">EVENTS</a></li>
+          <li><a href="plan your visit.html">PLAN YOUR VISIT</a></li>
+        </ul>
+      </div>
+      <img src="img/menu.svg" class="icons" onclick="showmenu()">
+    </nav>
+    <h1>Events</h1>
+  </section>
+
+  <!-- events section -->
+    <section class="events">
+      <h1>"Moments in New York City."</h1>
+      <p>Lorem ipsum dolor sit amet consecteur adipisicing elit.</p>
+      <div class="row">
+        <div class="events-col">
+          <img src="img/Downtown-nyc.jpeg">
+          <h3>Downtown</h3>
+        </div>
+
+        <div class="events-col">
+          <img src="img/New year eve.jpeg">
+          <h3>New Year Eve</h3>
+        </div>
+
+        <div class="events-col">
+          <img src="img/Night-life in nyc.jpeg">
+          <h3>Night-life</h3>
+        </div>
+
+        <div class="events-col">
+          <img src="img/Night view.jpeg">
+          <h3>Evening-view</h3>
+        </div>
+
+        <div class="events-col">
+          <img src="img/Night-life in nyc.jpeg">
+          <h3>Christmas</h3>
+        </div>
+
+        <div class="events-col">
+          <img src="img/Sky-diving.jpg">
+          <h3>Sky-diving</h3>
+        </div>
+
+        <div class="events-col">
+          <img src="img/Waterview.jpeg">
+          <h3>Water-view</h3>
+        </div>
+
+        <div class="events-col">
+          <img src="img/About us nyc.jpg">
+          <h3>Celebrations</h3>
+        </div>
+
+        <div class="events-col">
+          <img src="img/Thanksgivings.jpeg">
+          <h3>Thanksgiving</h3>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- blog section -->
+    <section class="blog-content">
+      <div class="row">
+        <div class="blog-left">
+          <img src="img/Downtown-nyc.jpeg">
+          <h2>Brief History of New York City</h2>
+          <p>New York City, often called "The Big Apple," has a rich and fascinating history that spans over 400 years. Originally inhabited by the Lenape Native Americans, the area was first settled by Europeans in 1624 when the Dutch established New Amsterdam on Manhattan Island.</p>
+          <p>In 1664, the English captured the city and renamed it New York after the Duke of York. The city grew rapidly during the 18th century, becoming a major port and commercial center. The American Revolution saw New York as a crucial battleground, with the famous Battle of Brooklyn taking place in 1776.</p>
+          <p>The 19th century brought massive immigration, particularly through Ellis Island, making New York a melting pot of cultures. The construction of the Brooklyn Bridge in 1883 and the opening of the subway system in 1904 helped shape the modern city.</p>
+          <p>Today, New York City stands as one of the world's most influential cities, known for its iconic landmarks like the Statue of Liberty, Empire State Building, and Central Park, as well as its role as a global center for finance, culture, and innovation.</p>
+
+          <div class="comment-box">
+            <h3>Leave a comment</h3>
+            <form class="comment-form">
+              <div class="form-group">
+                <input type="text" placeholder="Enter Name">
+              </div>
+              <div class="form-group">
+                <input type="email" placeholder="Enter Email">
+              </div>
+              <div class="form-group">
+                <textarea rows="5" placeholder="Your comment"></textarea>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="hero-btn red-btn">POST COMMENT</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="blog-right">
+          <div class="post-categories">
+            <h3>Post Categories</h3>
+            <ul>
+              <li><a href="#">Historical Landmarks</a></li>
+              <li><a href="#">Cultural Events</a></li>
+              <li><a href="#">Food & Dining</a></li>
+              <li><a href="#">Shopping Districts</a></li>
+              <li><a href="#">Entertainment</a></li>
+              <li><a href="#">Parks & Recreation</a></li>
+              <li><a href="#">Museums & Art</a></li>
+              <li><a href="#">Nightlife</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- footer section -->
+  <section class="footer">
+    <h4>About Us</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <div class="footer-icons">
+      <img src="img/facebook.svg">
+      <img src="img/instagram.svg">
+      <img src="img/linkedin.svg">
+      <img src="img/twitter.svg">
+    </div>
+    <p>Made with love by <a href="">@Timani</a></p>
+  </section>
+
+  <!-- javascript for togglemenu -->
+  <script>
+    var navLinks=document.getElementById("navLinks");
+    function showmenu() {
+      navLinks.style.right="0";
+    }
+    function hidemenu() {
+      navLinks.style.right="-200px";
+    }
+  </script>
+
+</body>
+</html> 

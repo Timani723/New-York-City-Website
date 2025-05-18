@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New York City Website Design</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <section class="header">
+    <nav>
+      <h2><a>NYC</a></h2>
+      <div class="nav-links" id="navLinks">
+        <img src="img/xmark.svg" class="icons" onclick="hidemenu()">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="explore.html">EXPLORE</a></li>
+          <li><a href="Events_new.html">EVENTS</a></li>
+          <li><a href="plan your visit.html">PLAN YOUR VISIT</a></li>
+        </ul>
+      </div>
+      <img src="img/menu.svg" class="icons" onclick="showmenu()">
+    </nav>
+    <div class="text-box">
+      <h1>Discover the Heart of New York City</h1>
+      <h3>Explore neighborhoods, culture, foods, and iconic sights</h3>
+      <p>"From Times Square to Central Park- it's all here."</p>
+      <a href="" class="hero-btn">Explore Now</a>
+    </div>
+  </section>
+  <!-- city life -->
+    <section class="city-life">
+      <h1>Discover the City in Your Style</h1>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+      <div class="row">
+        <div class="city-col">
+          <h3>Everyday Explorer</h3>
+          <p>"Ease into the heartbeat of New York City. From peaceful morning walks in Central park to cozy cafes tucked into quiet corners of the west village, this level is all about taking it slow. Catch street performers, browse weekend markets, and enjoy the city like a curious local discovering something new each day."</p>
+        </div>
+        <div class="city-col">
+          <h3>City Adventurer</h3>
+          <p>"Ready to feel the city pulse? The city adventurer jumps right into the cultural mix-from vibrant street art in Brooklyn to iconic bagel shops in Manhattan. Catch a pop-up gallery, ride the subway across boroughs, and taste cusines from around the world, all in a single afternoon. This is NYC most visitors dream about."</p>
+        </div>
+        <div class="city-col">
+          <h3>Urban Insider</h3>
+          <p>"This one is for the bold. Duck through hidden alleys, slip into unmarked jazz clubs, or discover rooftop gardens only locals whisper about. Whether you're chasing the next underground event or finding the perfect skyline view nobody posts about, Urban insider knows the city's best secrets-and lives for the unexpected."</p>
+        </div>
+      </div>
+    </section>
+    <!-- city highlights -->
+      <section class="states">
+        <h1>City Highlights</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <div class="row">
+          <div class="state-col">
+            <img src="img/brooklyn.jpeg">
+            <div class="layer">
+              <h3>BROOKLYN</h3>
+            </div>
+          </div>
+          <div class="state-col">
+            <img src="img/manhattan.jpg">
+            <div class="layer">
+              <h3>MANHATTAN</h3>
+            </div>
+        </div>
+        <div class="state-col">
+          <img src="img/Staten-Island.jpg">
+          <div class="layer">
+            <h3>STATEN-ISLAND</h3>
+          </div>
+          </div>
+      </section>
+      <!-- City Experiences -->
+        <section class="experiences">
+          <h1>City Experiences</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <div class="row">
+            <div class="experience-col">
+              <img src="img/Festivals.jpeg">
+              <h3>Festivals</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="experience-col">
+              <img src="img/Games.jpeg">
+              <h3>Games</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="experience-col">
+              <img src="img/Thanksgivings.jpeg">
+              <h3>Thanksgivings</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+            </div>
+          </div>
+        </section>
+        <!-- Traveler testimonials -->
+          <section class="testimonials">
+            <h1>What Our Travelers Say</h1>
+            <div class="row">
+              <div class="testimonial-col">
+                <img src="img/author.png">
+                <div>
+                  <p>"I've travelled to a lot of cities, but there's just something magical about New York. I stayed in manhattan and every morning felt like I was in a movie-from the rush on the subway to the calm in Central Park. The energy here is unmatched and i can't already wit to come back."</p>
+                  <h3>Jayden, Spain</h3>
+                </div>
+              </div>
+              <div class="testimonial-col">
+                <img src="img/author.png">
+                <div>
+                  <p>"New York City was in my bucket list for years, and it was worth every second. I explored Times Square at night, visited the MET and even cuaght a broadway show. The city never sleeps, and the energy is contagious. I'll be back for sure."</p>
+                  <h3>Michael, Australia</h3>
+                </div>
+              </div>
+            </div>
+
+          </section>
+          <!-- call to action -->
+            <section class="cta">
+              <h1>Visit us to experience the best of New York City</h1>
+              <a href="" class="hero-btn">CONTACT US</a>
+            </section>
+            <!-- footer -->
+              <section class="footer">
+                <h4>About Us</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <!-- Social Media Icons -->
+                <div class="footer-icons">
+                  <img src="img/facebook.svg">
+                  <img src="img/instagram.svg">
+                  <img src="img/linkedin.svg">
+                  <img src="img/twitter.svg">
+                </div>
+                <p>Made with love by <a href="">@Timani</a></p>
+              </section>
+
+
+
+
+
+<!-- javascript for togglemenu -->
+  <script>
+    // Navigation menu toggle functions
+    var navLinks=document.getElementById("navLinks");
+    function showmenu() {
+      navLinks.style.right="0";
+    }
+    function hidemenu() {
+      navLinks.style.right="-200px";
+    }
+  </script>
+</body>
+</html>

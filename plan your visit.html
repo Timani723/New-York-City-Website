@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New York City</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="sub-header">
+    <nav>
+      <h2><a>NYC</a></h2>
+      <div class="nav-links" id="navLinks">
+        <img src="img/xmark.svg" class="icons" onclick="hidemenu()">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="explore.html">EXPLORE</a></li>
+          <li><a href="Events_new.html">EVENTS</a></li>
+          <li><a href="plan your visit.html">PLAN YOUR VISIT</a></li>
+        </ul>
+      </div>
+      <img src="img/menu.svg" class="icons" onclick="showmenu()">
+    </nav>
+    <h1>CONTACT US TO PLAN YOUR VISIT</h1>
+  </section>
+  <!-- contact us -->
+    <section class="location">
+      <img src="img/nyc map.jpg">
+    </section>
+
+    <section class="contact-us">
+      <div class="row">
+        <div class="contact-col">
+          <div class="contact-item">
+            <img src="img/house.svg" class="fa">
+            <div class="contact-info">
+              <h5>1560 Broadway, New York, NY 10036</h5>
+              <p>United States</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <img src="img/phone.svg" class="fa">
+            <div class="contact-info">
+              <h5>+1 212 347 1230</h5>
+              <p>Mon - Fri, 9:00AM - 20:00PM</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <img src="img/envelope.svg" class="fa">
+            <div class="contact-info">
+              <h5>info@timaniabubakar@gmail.com</h5>
+              <p>email us your questions</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+  <!-- footer -->
+  <section class="footer">
+    <h4>About Us</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <div class="footer-icons">
+      <img src="img/facebook.svg">
+      <img src="img/instagram.svg">
+      <img src="img/linkedin.svg">
+      <img src="img/twitter.svg">
+    </div>
+    <p>Made with love by <a href="">@Timani</a></p>
+  </section>
+
+  <!-- javascript for togglemenu -->
+  <script>
+    var navLinks=document.getElementById("navLinks");
+    function showmenu() {
+      navLinks.style.right="0";
+    }
+    function hidemenu() {
+      navLinks.style.right="-200px";
+    }
+  </script>
+</body>
+</html>

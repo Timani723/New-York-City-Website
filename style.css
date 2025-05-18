@@ -1,0 +1,902 @@
+* {
+  margin: 0; /* Removes default margin from all elements */
+  padding: 0; /* Removes default padding from all elements */
+  font-family: Arial, Helvetica, sans-serif; /* Sets default font for all text */
+}
+.header {
+  min-height: 100vh; /* Makes header take full viewport height */
+  width: 100%; /* Makes header span full width */
+  background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)),url(img/Empire\ state\ building\ .jpg); /* Adds semi-transparent overlay on background image */
+  background-size: cover; /* Makes background image cover entire container */
+  background-position: center; /* Centers the background image */
+  position: relative; /* Enables absolute positioning of child elements */
+}
+nav {
+  display: flex; /* Creates flexible box layout */
+  padding: 2% 6%; /* Adds padding: 2% top/bottom, 6% left/right */
+  justify-content: space-between; /* Spaces items evenly with first/last items at edges */
+  align-items: center; /* Centers items vertically */
+}
+.nav-links {
+  flex: 1; /* Takes up remaining space */
+  text-align: right; /* Aligns text to the right */
+}
+.nav-links ul li {
+  list-style: none; /* Removes bullet points */
+  display: inline-block; /* Makes list items display in line */
+  padding: 8px 12px; /* Adds padding: 8px top/bottom, 12px left/right */
+  position: relative; /* Enables absolute positioning of pseudo-elements */
+}
+nav h2 {
+  color: #fff; /* Makes text white */
+}
+.nav-links ul li a {
+  color: #fff; /* Makes text white */
+  text-decoration: none; /* Removes underline from links */
+  font-size: 13px; /* Sets font size */
+}
+.nav-links ul li::after {
+  content: ""; /* Creates empty content for pseudo-element */
+  width: 0; /* Starts with no width */
+  height: 2px; /* Sets height of underline */
+  background: #f44336; /* Sets color of underline */
+  display: block; /* Makes element block-level */
+  margin: auto; /* Centers the element */
+}
+.nav-links ul li:hover::after {
+  width: 100%; /* Expands width to 100% on hover */
+  transition: 0.5s; /* Adds smooth transition effect */
+}
+.text-box {
+  width: 90%; /* Sets width to 90% of parent */
+  color: #fff; /* Makes text white */
+  position: absolute; /* Positions element absolutely */
+  top: 50%; /* Moves element 50% from top */
+  left: 50%; /* Moves element 50% from left */
+  transform: translate(-50%, -50%); /* Centers element perfectly */
+  text-align: center; /* Centers text */
+}
+.text-box h1 {
+  font-size: 60px; /* Sets large font size */
+  margin-bottom: 20px; /* Adds space below heading */
+}
+.text-box h3 {
+  font-size: 20px; /* Sets medium font size */
+  margin-bottom: 15px; /* Adds space below subheading */
+}
+.text-box p {
+  margin: 10px 0 40px; /* Adds margin: 10px top, 0 left/right, 40px bottom */
+  font-size: 14px; /* Sets font size */
+  color: #fff; /* Makes text white */
+}
+.hero-btn {
+  display: inline-block; /* Makes button display inline but with block properties */
+  text-decoration: none; /* Removes underline */
+  color: #fff; /* Makes text white */
+  border: 1px solid #fff; /* Adds white border */
+  padding: 12px 34px; /* Adds padding: 12px top/bottom, 34px left/right */
+  font-size: 13px; /* Sets font size */
+  background: transparent; /* Makes background transparent */
+  position: relative; /* Enables absolute positioning of pseudo-elements */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+}
+.hero-btn:hover {
+  border: 1px solid #f44336; /* Changes border color on hover */
+  background: #f44336; /* Changes background color on hover */
+  transition: 1s; /* Adds smooth transition effect */
+}
+.icons {
+  display: none; /* Hides icons by default */
+}
+@media(max-width:700px) {
+  * {
+    max-width: 100%; /* Ensures elements don't overflow container */
+    box-sizing: border-box; /* Includes padding and border in width calculation */
+  }
+  
+  .text-box h1 {
+    font-size: 25px; /* Reduces font size on mobile */
+    margin-bottom: 5px; /* Reduces margin on mobile */
+  }
+  .text-box h3 {
+    font-size: 12px; /* Reduces font size on mobile */
+  }
+  .text-box {
+    align-items: center; /* Centers items vertically */
+    padding-left: 5px; /* Adds small left padding */
+  }
+  .nav-links ul li {
+    display: block; /* Makes list items stack vertically */
+  }
+  .nav-links {
+    position: fixed; /* Fixes position relative to viewport */
+    background: #f44336; /* Sets red background */
+    height: 100vh; /* Makes menu full viewport height */
+    width: 200px; /* Sets menu width */
+    top: 0; /* Positions at top */
+    right: -200px; /* Hides menu off-screen initially */
+    text-align: left; /* Aligns text to left */
+    z-index: 2; /* Places menu above other elements */
+    transition: 0.5s; /* Adds smooth transition */
+  }
+  
+  .nav-links.active {
+    right: 0; /* Shows menu by moving it on-screen */
+  }
+  
+  .nav-links ul {
+    padding: 30px; /* Adds padding around menu items */
+  }
+  
+  .nav-links ul li {
+    display: block; /* Makes list items stack vertically */
+  }
+  
+  .icons {
+    display: block; /* Shows icons on mobile */
+    filter: brightness(0) invert(1); /* Makes icons white */
+    margin: 10px; /* Adds space around icons */
+    width: 20px; /* Sets icon width */
+    height: 20px; /* Sets icon height */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+  }
+  .footer {
+    padding: 20px 0; /* Adds padding top/bottom */
+  }
+  .footer h4 {
+    font-size: 20px; /* Sets font size */
+    margin-bottom: 15px; /* Adds space below heading */
+  }
+  .footer p {
+    font-size: 10px; /* Reduces font size on mobile */
+    margin-top: 10px; /* Adds space above paragraph */
+    padding: 0 20px; /* Adds padding left/right */
+  }
+  .footer-icons {
+    display: flex !important; /* Forces flex display */
+    justify-content: center; /* Centers icons horizontally */
+    gap: 15px; /* Adds space between icons */
+    margin-top: 15px; /* Adds space above icons */
+    width: 100%; /* Makes container full width */
+  }
+  .footer-icons img {
+    width: 20px; /* Sets icon width */
+    height: 20px; /* Sets icon height */
+    display: inline-block; /* Makes icons display inline */
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%) !important; /* Makes icons red */
+    transition: 0.3s; /* Adds smooth transition */
+  }
+  .footer-icons img:hover {
+    transform: translateY(-3px); /* Moves icon up on hover */
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%) brightness(1.2) !important; /* Brightens icon on hover */
+  }
+}
+/* city life */
+.city-life {
+  width: 80%; /* Sets section width to 80% of viewport */
+  margin: auto; /* Centers section horizontally */
+  text-align: center; /* Centers text content */
+  padding-top: 100px; /* Adds space above section */
+}
+.city-life h1 {
+  font-size: 35px; /* Sets heading size */
+  font-weight: 600; /* Makes text semi-bold */
+}
+.city-life p {
+  color: #777; /* Sets text color to gray */
+  font-size: 15px; /* Sets paragraph text size */
+  font-weight: 300; /* Makes text light */
+  line-height: 22px; /* Sets space between lines */
+  padding: 10px; /* Adds padding around text */
+}
+.row {
+  margin-top: 5%; /* Adds 5% space above row */
+  display: flex; /* Creates flexible box layout */
+  flex-wrap: wrap; /* Allows items to wrap to next line */
+  gap: 20px; /* Adds 20px space between items */
+  justify-content: center; /* Centers items horizontally */
+}
+.city-col {
+  flex-basis: 31%; /* Sets column width to 31% */
+  background: #fff3f3; /* Sets light red background */
+  border-radius: 10px; /* Rounds corners */
+  margin-bottom: 5%; /* Adds space below column */
+  padding: 20px 12px; /* Adds padding inside column */
+  box-sizing: border-box; /* Includes padding in width calculation */
+  transition: 0.5s; /* Adds smooth transition effect */
+}
+.city-col h3 {
+  text-align: center; /* Centers heading */
+  font-weight: 600; /* Makes text semi-bold */
+  margin: 10px; /* Adds space around heading */
+}
+.city-col:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2); /* Adds shadow on hover */
+}
+@media(max-width:700px) {
+  .row {
+    flex-direction: column; /* Stacks items vertically on mobile */
+  }
+}
+/* city highlights */
+.states {
+  width: 80%; /* Sets section width */
+  margin: auto; /* Centers section */
+  text-align: center; /* Centers text */
+  padding-top: 50px; /* Adds space above section */
+}
+.states h1 {
+  font-size: 35px; /* Sets heading size */
+  font-weight: 600; /* Makes text semi-bold */
+}
+.states p {
+  color: #777; /* Sets text color to gray */
+  font-size: 15px; /* Sets text size */
+  font-weight: 300; /* Makes text light */
+  line-height: 22px; /* Sets line spacing */
+  padding: 10px; /* Adds padding around text */
+}
+.state-col {
+  flex-basis: 32%; /* Sets column width */
+  border-radius: 10px; /* Rounds corners */
+  margin-bottom: 30px; /* Adds space below column */
+  position: relative; /* Enables absolute positioning of children */
+  overflow: hidden; /* Hides overflow content */
+  width: 100%; /* Makes container full width */
+  height: 300px; /* Sets fixed height */
+  display: flex; /* Creates flexible box layout */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+}
+.state-col img {
+  width: 100%; /* Makes image fill container */
+  height: 100%; /* Makes image fill container */
+  object-fit: cover; /* Maintains image aspect ratio */
+  object-position: center; /* Centers image within container */
+}
+.layer {
+  background: transparent; /* Makes background transparent */
+  height: 100%; /* Makes layer full height */
+  width: 100%; /* Makes layer full width */
+  position: absolute; /* Positions layer absolutely */
+  top: 0; /* Positions at top */
+  left: 0; /* Positions at left */
+  transition: 0.5s; /* Adds smooth transition */
+}
+.layer:hover {
+  background: rgba(226, 0, 0, 0.7); /* Adds red overlay on hover */
+}
+.layer h3 {
+  color: #fff; /* Makes text white */
+  width: 100%; /* Makes text full width */
+  font-weight: 500; /* Sets font weight to medium */
+  font-size: 25px; /* Sets font size */
+  position: absolute; /* Positions text absolutely */
+  opacity: 0; /* Makes text invisible initially */
+  transition: 0.5s; /* Adds smooth transition */
+}
+.layer:hover h3 {
+  opacity: 1; /* Makes text visible on hover */
+}
+/* city experiences */
+.experiences {
+  width: 80%; /* Sets section width */
+  margin: auto; /* Centers section */
+  text-align: center; /* Centers text */
+  padding-top: 100px; /* Adds space above section */
+}
+.experiences h1 {
+  font-size: 35px; /* Sets heading size */
+  font-weight: 600; /* Makes text semi-bold */
+}
+.experiences p {
+  color: #777; /* Sets text color to gray */
+  font-size: 15px; /* Sets text size */
+  font-weight: 300; /* Makes text light */
+  line-height: 22px; /* Sets line spacing */
+  padding: 10px; /* Adds padding around text */
+}
+.experiences .row {
+  display: flex; /* Creates flexible box layout */
+  justify-content: space-between; /* Spaces items evenly */
+  margin-top: 5%; /* Adds 5% space above row */
+}
+.experience-col {
+  flex-basis: 32%; /* Sets column width to 32% */
+  border-radius: 10px; /* Rounds corners */
+  margin-bottom: 5%; /* Adds 5% space below column */
+  text-align: center; /* Centers text */
+}
+.experience-col img {
+  width: 100%; /* Makes image fill container */
+  height: 300px; /* Sets fixed height */
+  object-fit: cover; /* Maintains image aspect ratio */
+  border-radius: 10px; /* Rounds image corners */
+  margin-bottom: 15px; /* Adds 15px space below image */
+}
+.experience-col h3 {
+  margin-bottom: 10px; /* Adds 10px space below heading */
+  text-align: center; /* Centers heading */
+}
+.experience-col p {
+  color: #777; /* Sets text color to gray */
+  font-size: 14px; /* Sets paragraph text size */
+  line-height: 22px; /* Sets space between lines */
+  text-align: center; /* Centers text */
+}
+@media(max-width:700px) {
+  .experiences .row {
+    flex-direction: column; /* Stacks items vertically on mobile */
+  }
+}
+/* traveler testimonials */
+.testimonials {
+  width: 80%; /* Sets section width */
+  margin: auto; /* Centers section */
+  padding-top: 100px; /* Adds space above section */
+  text-align: center; /* Centers text */
+}
+.testimonial-col {
+  flex-basis: 44%; /* Sets column width to 44% */
+  border-radius: 10px; /* Rounds corners */
+  margin-bottom: 5%; /* Adds 5% space below column */
+  text-align: left; /* Aligns text to left */
+  background: #fff3f3; /* Sets light red background */
+  padding: 25px; /* Adds 25px padding all around */
+  cursor: pointer; /* Changes cursor to pointer */
+  display: flex; /* Creates flexible box layout */
+  align-items: center; /* Centers items vertically */
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+  transition: 0.5s; /* Adds smooth transition */
+}
+.testimonial-col:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2); /* Enhances shadow on hover */
+}
+.testimonial-col img {
+  height: 60px; /* Sets image height */
+  width: 60px; /* Sets image width */
+  border-radius: 50%; /* Makes image circular */
+  margin-right: 30px; /* Adds 30px space after image */
+  object-fit: cover; /* Maintains image aspect ratio */
+}
+.testimonial-col div {
+  flex: 1; /* Takes up remaining space */
+}
+.testimonial-col p {
+  padding: 0; /* Removes padding */
+  margin: 10px 0; /* Adds 10px margin top/bottom */
+  font-size: 14px; /* Sets paragraph text size */
+  line-height: 1.5; /* Sets space between lines */
+  color: #777; /* Sets text color to gray */
+}
+.testimonial-col h3 {
+  margin-top: 15px; /* Adds 15px space above heading */
+  text-align: left; /* Aligns heading to left */
+  font-size: 18px; /* Sets heading size */
+  color: #333; /* Sets text color to dark gray */
+}
+.testimonial-col .fa {
+  color: #f44336; /* Sets icon color to red */
+  margin: 10px 5px; /* Adds 10px margin top/bottom, 5px left/right */
+}
+@media(max-width:700px) {
+  .testimonial-col {
+    flex-direction: column; /* Stacks items vertically on mobile */
+    text-align: center; /* Centers text on mobile */
+  }
+  .testimonial-col img {
+    margin: 0 auto 20px auto; /* Centers image and adds space below */
+  }
+  .testimonial-col h3 {
+    text-align: center; /* Centers heading on mobile */
+  }
+}
+/* Call to action */
+.cta {
+  margin: 100px auto; /* Adds 100px margin top/bottom, auto left/right */
+  width: 80%; /* Sets section width to 80% of viewport */
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(img/Night\ view.jpeg); /* Adds dark overlay on background */
+  background-size: cover; /* Makes background cover container */
+  background-position: center; /* Centers background */
+  border-radius: 10px; /* Rounds corners */
+  padding: 100px 0; /* Adds 100px padding top/bottom */
+  text-align: center; /* Centers text */
+  box-shadow: 0 0 20px rgba(0,0,0,0.2); /* Adds shadow */
+}
+.cta h1 {
+  color: #fff; /* Makes text white */
+  font-size: 40px; /* Sets heading size */
+  margin-bottom: 40px; /* Adds 40px space below heading */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Adds text shadow */
+}
+.cta a {
+  display: inline-block; /* Makes link display inline but with block properties */
+  text-decoration: none; /* Removes underline */
+  color: #fff; /* Makes text white */
+  border: 1px solid #fff; /* Adds white border */
+  padding: 12px 34px; /* Adds 12px padding top/bottom, 34px left/right */
+  font-size: 13px; /* Sets text size */
+  background: transparent; /* Makes background transparent */
+  position: relative; /* Enables absolute positioning */
+  cursor: pointer; /* Changes cursor to pointer */
+  transition: 0.5s; /* Adds smooth transition */
+}
+.cta a:hover {
+  border: 1px solid #f44336; /* Changes border color on hover */
+  background: #f44336; /* Changes background color on hover */
+}
+@media(max-width:700px) {
+  .cta h1 {
+    font-size: 24px; /* Reduces heading size on mobile */
+  }
+}
+/* footer */
+.footer {
+  width: 100%; /* Makes footer full width */
+  text-align: center; /* Centers text */
+  padding: 30px 0; /* Adds 30px padding top/bottom */
+  background: #f3f3f3; /* Sets light gray background */
+}
+.footer h4 {
+  margin-bottom: 20px; /* Adds 20px space below heading */
+  margin-top: 20px; /* Adds 20px space above heading */
+  font-weight: 600; /* Makes text semi-bold */
+}
+.footer p {
+  margin-top: 20px; /* Adds 20px space above paragraph */
+  font-size: 12px; /* Sets text size */
+  color: #f44336; /* Sets text color to red */
+}
+.footer p a {
+  text-decoration: none; /* Removes underline */
+  color: #f44336; /* Sets text color to red */
+  font-weight: 600; /* Makes text semi-bold */
+}
+.footer-icons {
+  display: flex !important; /* Forces flex display */
+  justify-content: center; /* Centers icons horizontally */
+  gap: 20px; /* Adds 20px space between icons */
+  margin-top: 20px; /* Adds 20px space above icons */
+  width: 100%; /* Makes container full width */
+}
+.footer-icons img {
+  width: 20px; /* Sets icon width */
+  height: 20px; /* Sets icon height */
+  display: inline-block !important; /* Forces inline-block display */
+  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%) !important; /* Makes icons red */
+  transition: 0.3s; /* Adds smooth transition */
+}
+.footer-icons img:hover {
+  transform: translateY(-3px); /* Moves icon up on hover */
+  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%) brightness(1.2) !important; /* Brightens icon on hover */
+}
+/* contact us and plan your visit page */
+.location {
+  width: 80%; /* Sets section width to 80% of viewport */
+  margin: auto; /* Centers section horizontally */
+  padding: 80px 0; /* Adds 80px padding top/bottom */
+}
+.location img {
+  width: 100%; /* Makes image fill container */
+  height: 400px; /* Sets fixed height */
+}
+.contact-us {
+  width: 80%; /* Sets section width to 80% of viewport */
+  margin: 0 auto; /* Centers section horizontally */
+  display: flex; /* Creates flexible box layout */
+  justify-content: flex-start; /* Aligns items to start */
+  padding: 0; /* Removes padding */
+  margin-top: -80px; /* Moves section up by 80px */
+  margin-left: 80px; /* Adds 80px space from left */
+}
+.contact-col {
+  display: flex; /* Creates flexible box layout */
+  flex-direction: column; /* Stacks items vertically */
+  align-items: flex-start; /* Aligns items to start */
+  padding: 40px; /* Adds 40px padding all around */
+  max-width: 600px; /* Sets maximum width */
+}
+.contact-item {
+  display: flex; /* Creates flexible box layout */
+  align-items: flex-start; /* Aligns items to start */
+  margin-bottom: 25px; /* Adds 25px space below item */
+}
+.contact-item img {
+  width: 24px; /* Sets icon width */
+  height: 24px; /* Sets icon height */
+  margin-right: 15px; /* Adds 15px space after icon */
+  margin-top: 4px; /* Adds 4px space above icon */
+  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%); /* Makes icon red */
+}
+.contact-info {
+  display: flex; /* Creates flexible box layout */
+  flex-direction: column; /* Stacks items vertically */
+}
+.contact-info h5 {
+  margin: 0; /* Removes margin */
+  font-size: 14px; /* Sets text size */
+  color: #000; /* Sets text color to black */
+  font-weight: 500; /* Sets font weight to medium */
+}
+.contact-info p {
+  margin: 3px 0; /* Adds 3px margin top/bottom */
+  font-size: 12px; /* Sets text size */
+  color: #777; /* Sets text color to gray */
+}
+@media(max-width: 700px) {
+  .contact-us {
+    margin: 0; /* Removes margin */
+    padding: 0; /* Removes padding */
+    width: 100%; /* Makes section full width */
+    display: block; /* Changes to block display */
+  }
+  .contact-col {
+    padding: 20px; /* Reduces padding to 20px */
+    width: 100%; /* Makes column full width */
+    max-width: 100%; /* Removes max-width restriction */
+  }
+  .contact-item {
+    margin-bottom: 15px; /* Reduces space below item */
+  }
+  .contact-info h5 {
+    font-size: 13px; /* Reduces text size */
+  }
+  .contact-info p {
+    font-size: 11px; /* Reduces text size */
+  }
+}
+/* about us page */
+.sub-header {
+  height: 50vh; /* Sets height to 50% of viewport height */
+  width: 100%; /* Makes section full width */
+  background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(img/About\ us\ nyc.jpg); /* Adds dark overlay on background image */
+  background-position: center; /* Centers the background image */
+  background-size: cover; /* Makes background image cover entire container */
+  text-align: center; /* Centers text */
+  color: #fff; /* Makes text white */
+}
+.sub-header h1 {
+  margin-top: 100px; /* Adds 100px space above heading */
+}
+/* about us content */
+.about-us {
+  width: 80%; /* Sets section width to 80% of viewport */
+  margin: auto; /* Centers section horizontally */
+  padding-top: 80px; /* Adds 80px space above section */
+}
+.about-us .row {
+  display: flex; /* Creates flexible box layout */
+  justify-content: space-between; /* Spaces items evenly */
+  align-items: flex-start; /* Aligns items to top */
+  gap: 40px; /* Adds 40px space between columns */
+}
+.about-col {
+  flex-basis: 48%; /* Sets column width to 48% */
+  padding: 30px 2px; /* Adds 30px padding top/bottom, 2px left/right */
+}
+.about-col img {
+  width: 100%; /* Makes image fill container */
+  height: auto; /* Maintains aspect ratio */
+  object-fit: cover; /* Maintains image aspect ratio */
+  object-position: center; /* Centers image within container */
+  border-radius: 15px; /* Rounds corners */
+  box-shadow: 0 0 20px rgba(0,0,0,0.2); /* Adds subtle shadow */
+}
+.about-col h1 {
+  font-size: 35px; /* Sets heading size */
+  font-weight: 600; /* Makes text semi-bold */
+  margin-bottom: 20px; /* Adds 20px space below heading */
+}
+.about-col p {
+  color: #777; /* Sets text color to gray */
+  font-size: 15px; /* Sets paragraph text size */
+  line-height: 1.6; /* Sets space between lines */
+  margin-bottom: 15px; /* Adds 15px space below paragraph */
+}
+.hero-btn {
+  margin-top: 30px; /* Adds 30px space above button */
+  border: 1px solid #f44336; /* Adds red border */
+  color: #f44336; /* Sets text color to red */
+}
+.hero-btn:hover {
+  background: #f44336; /* Changes background color on hover */
+  color: #fff; /* Changes text color to white on hover */
+  transition: 0.5s; /* Adds smooth transition */
+  border: 1px solid #f44336; /* Maintains red border */
+}
+/* explore section */
+.explore {
+  width: 80%; /* Sets section width to 80% of viewport */
+  margin: auto; /* Centers section horizontally */
+  text-align: center; /* Centers text content */
+  margin-top: 20px; /* Adds 20px space above section */
+}
+.explore h1 {
+  font-size: 36px; /* Sets heading size */
+  font-weight: 600; /* Makes text semi-bold */
+}
+.explore p {
+  color: #777; /* Sets text color to gray */
+  font-size: 14px; /* Sets paragraph text size */
+  padding: 10px; /* Adds 10px padding around text */
+}
+.explore-col {
+  flex-basis: calc(33.333% - 20px); /* Sets column width to one-third minus 20px gap */
+  margin-bottom: 20px; /* Adds 20px space below column */
+  text-align: center; /* Centers text content */
+}
+.explore-col img {
+  width: 100%; /* Makes image fill container */
+  height: 250px; /* Sets fixed height */
+  object-fit: cover; /* Maintains image aspect ratio */
+  border-radius: 10px; /* Rounds corners */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Adds subtle shadow */
+  transition: 0.3s; /* Adds smooth transition */
+}
+.explore-col img:hover {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); /* Enhances shadow on hover */
+  transform: translateY(-5px); /* Moves image up by 5px on hover */
+}
+.explore-col h3 {
+  margin-top: 16px; /* Adds 16px space above heading */
+  margin-bottom: 15px; /* Adds 15px space below heading */
+  text-align: center; /* Centers heading text */
+}
+@media(max-width: 700px) {
+  .explore-col {
+    flex-basis: 100%; /* Makes column full width on mobile */
+  }
+}
+/* events section */
+.events {
+  width: 80%; /* Sets section width to 80% of viewport */
+  margin: auto; /* Centers section horizontally */
+  text-align: center; /* Centers text content */
+  padding-top: 100px; /* Adds 100px space above section */
+}
+.events h1 {
+  font-size: 36px; /* Sets heading size */
+  font-weight: 600; /* Makes text semi-bold */
+}
+.events p {
+  color: #777; /* Sets text color to gray */
+  font-size: 14px; /* Sets paragraph text size */
+  padding: 10px; /* Adds 10px padding around text */
+}
+.events .row {
+  display: flex; /* Creates flexible box layout */
+  flex-wrap: wrap; /* Allows items to wrap to next line */
+  justify-content: center; /* Centers items horizontally */
+  gap: 20px; /* Adds 20px space between items */
+  margin-top: 30px; /* Adds 30px space above row */
+}
+.events-col {
+  flex-basis: calc(33.333% - 20px); /* Sets column width to one-third minus 20px gap */
+  margin-bottom: 20px; /* Adds 20px space below column */
+  text-align: center; /* Centers text content */
+}
+.events-col img {
+  width: 100%; /* Makes image fill container */
+  height: 250px; /* Sets fixed height */
+  object-fit: cover; /* Maintains image aspect ratio */
+  border-radius: 10px; /* Rounds corners */
+  box-shadow: 0 0 20px rgba(0,0,0,0.2); /* Adds subtle shadow */
+  transition: 0.3s; /* Adds smooth transition */
+}
+.events-col img:hover {
+  box-shadow: 0 0 30px rgba(0,0,0,0.3); /* Enhances shadow on hover */
+  transform: translateY(-5px); /* Moves image up by 5px on hover */
+}
+.events-col h3 {
+  margin-top: 16px; /* Adds 16px space above heading */
+  margin-bottom: 15px; /* Adds 15px space below heading */
+  text-align: center; /* Centers heading text */
+}
+@media(max-width: 1200px) {
+  .events-col {
+    flex-basis: calc(50% - 20px); /* Sets column width to half minus 20px gap on medium screens */
+  }
+}
+@media(max-width: 700px) {
+  .events-col {
+    flex-basis: 100%; /* Makes column full width on mobile */
+  }
+  .events-col img {
+    height: 300px; /* Increases image height on mobile */
+  }
+}
+/* blog section */
+.blog-content {
+  width: 90%; /* Sets section width to 90% of viewport */
+  margin: auto; /* Centers section horizontally */
+  padding: 20px 0; /* Adds 20px padding top/bottom */
+}
+
+.blog-content .row {
+  display: flex; /* Creates flexible box layout */
+  flex-direction: row; /* Arranges items horizontally */
+  width: 100%; /* Makes row full width */
+  gap: 40px; /* Adds 40px space between columns */
+  align-items: flex-start; /* Aligns items to top */
+  justify-content: flex-start; /* Aligns items to left */
+}
+
+.blog-left {
+  width: 60%; /* Sets column width to 60% */
+  float: left; /* Floats element to left */
+}
+
+.blog-left img {
+  width: 100%; /* Makes image fill container */
+  height: 120px; /* Sets fixed height */
+  object-fit: cover; /* Maintains image aspect ratio */
+  border-radius: 10px; /* Rounds corners */
+  box-shadow: 0 0 20px rgba(0,0,0,0.2); /* Adds subtle shadow */
+  margin-bottom: 20px; /* Adds 20px space below image */
+}
+
+.blog-left h2 {
+  color: #333; /* Sets text color to dark gray */
+  font-size: 28px; /* Sets heading size */
+  margin-bottom: 20px; /* Adds 20px space below heading */
+  font-weight: 600; /* Makes text semi-bold */
+}
+
+.blog-left p {
+  color: #777; /* Sets text color to gray */
+  font-size: 15px; /* Sets paragraph text size */
+  line-height: 1.6; /* Sets space between lines */
+  margin-bottom: 15px; /* Adds 15px space below paragraph */
+  text-align: justify; /* Justifies text alignment */
+}
+
+.blog-right {
+  width: 35%; /* Sets column width to 35% */
+  padding: 20px; /* Adds 20px padding all around */
+  background: #f9f9f9; /* Sets light gray background */
+  border-radius: 10px; /* Rounds corners */
+  height: fit-content; /* Adjusts height to content */
+  float: right; /* Floats element to right */
+  flex-basis: 32%; /* Sets flex basis to 32% */
+  margin-top: 40px; /* Adds 40px space above column */
+}
+
+.post-categories {
+  margin-top: 30px; /* Adds 30px space above section */
+}
+
+.post-categories h3 {
+  color: #333; /* Sets text color to dark gray */
+  font-size: 20px; /* Sets heading size */
+  margin-bottom: 15px; /* Adds 15px space below heading */
+  font-weight: 600; /* Makes text semi-bold */
+}
+
+.post-categories ul {
+  list-style: none; /* Removes bullet points */
+  display: flex; /* Creates flexible box layout */
+  flex-direction: column; /* Arranges items vertically */
+  gap: 10px; /* Adds 10px space between items */
+}
+
+.post-categories ul li {
+  padding: 8px 0; /* Adds 8px padding top/bottom */
+  border-bottom: 1px solid #eee; /* Adds light gray bottom border */
+}
+
+.post-categories ul li a {
+  color: #666; /* Sets text color to gray */
+  text-decoration: none; /* Removes underline */
+  transition: 0.3s; /* Adds smooth transition */
+  font-size: 14px; /* Sets text size */
+  display: block; /* Makes element block-level */
+}
+
+.post-categories ul li a:hover {
+  color: #f44336; /* Changes text color to red on hover */
+  padding-left: 5px; /* Adds 5px padding to left on hover */
+}
+
+@media(max-width: 700px) {
+  .blog-content .row {
+    flex-direction: column; /* Stacks items vertically on mobile */
+    gap: 20px; /* Reduces gap between items on mobile */
+  }
+  .blog-left, .blog-right {
+    width: 100%; /* Makes columns full width on mobile */
+    float: none; /* Removes float on mobile */
+    margin-top: 0; /* Removes top margin on mobile */
+  }
+  .blog-left img {
+    height: 200px; /* Increases image height on mobile */
+  }
+  .post-categories {
+    margin-top: 20px; /* Reduces top margin on mobile */
+  }
+}
+.comment-box {
+  border: 1px solid #ccc; /* Adds light gray border */
+  margin: 50px 0; /* Adds 50px margin top/bottom */
+  padding: 10px 20px; /* Adds 10px padding top/bottom, 20px left/right */
+}
+.comment-box h3 {
+  text-align: left; /* Aligns heading to left */
+}
+.comment-box form input, .comment-box form textarea {
+  width: 100%; /* Makes input full width */
+  padding: 10px; /* Adds padding inside input */
+  margin: 15px 0; /* Adds 15px margin top/bottom */
+  box-sizing: border-box; /* Includes padding in width calculation */
+  border: none; /* Removes border */
+  outline: none; /* Removes outline on focus */
+  background: #f0f0f0; /* Sets light gray background */
+}
+.comment-box form button {
+  margin: 10px 0; /* Adds 10px margin top/bottom */
+}
+
+@media(max-width: 700px) {
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .row {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .city-col, .state-col, .experience-col, .testimonial-col, .about-col, .explore-col, .events-col {
+    flex-basis: 100%;
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  .blog-content .row {
+    flex-direction: column;
+  }
+  
+  .blog-left, .blog-right {
+    width: 100%;
+  }
+  
+  .contact-us {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+  }
+  
+  .contact-col {
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .contact-item {
+    margin-bottom: 15px;
+  }
+  
+  .contact-info h5 {
+    font-size: 13px;
+  }
+  
+  .contact-info p {
+    font-size: 11px;
+  }
+}
+
+@media(max-width: 1200px) {
+  .events-col {
+    flex-basis: calc(50% - 20px); /* Sets column width to half minus 20px gap on medium screens */
+  }
+}
+
+@media(max-width: 700px) {
+  .events-col {
+    flex-basis: 100%; /* Makes column full width on mobile */
+  }
+  .events-col img {
+    height: 300px; /* Increases image height on mobile */
+  }
+}
